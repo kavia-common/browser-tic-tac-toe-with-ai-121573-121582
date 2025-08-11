@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { generateTrashTalk } from './services/openai';
+import WeatherWidget from './components/WeatherWidget';
 
 // Utility: check winner lines
 function calculateWinner(squares) {
@@ -143,6 +144,7 @@ function App() {
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
 
+        <WeatherWidget />
         <h1 className="title">Tic Tac Toe</h1>
         <p className="status" role="status" aria-live="polite">{status}</p>
 
